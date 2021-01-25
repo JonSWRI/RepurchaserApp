@@ -1,0 +1,39 @@
+head
+meta(charset='utf-8')
+meta(name='viewport', content='width=device-width, initial-scale=1.0')
+title BP2
+link(rel='stylesheet', href='assets/bootstrap/css/bootstrap.min.css')
+link(rel='stylesheet', href='assets/fonts/font-awesome.min.css')
+link(rel='stylesheet', href='assets/fonts/ionicons.min.css')
+link(rel='stylesheet', href='assets/css/Data-Table.css')
+link(rel='stylesheet', href='assets/css/Data-Table2.css')
+link(rel='stylesheet', href='assets/css/Features-Clean.css')
+link(rel='stylesheet', href='assets/css/Highlight-Clean.css')
+link(rel='stylesheet', href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css')
+link(rel='stylesheet', href='assets/css/Login-Form-Clean.css')
+link(rel='stylesheet', href='assets/css/MUSA_panel-table.css')
+link(rel='stylesheet', href='assets/css/MUSA_panel-table1.css')
+link(rel='stylesheet', href='assets/css/Navigation-with-Button.css')
+link(rel='stylesheet', href='assets/css/Registration-Form-with-Photo.css')
+link(rel='stylesheet', href='assets/css/styles.css')
+body
+div
+  nav.navbar.navbar-light.navbar-expand-md.navigation-clean-button(style='background-color:rgba(255,255,255,0);background:linear-gradient(90deg, rgb(255,4,160) 0%, rgb(245,121,0) 100%);')
+    .container
+      a.navbar-brand(href='/home', style='color:rgb(255,255,255);font-size:30px;') BidPro
+      button.navbar-toggler(data-toggle='collapse', data-target='#navcol-1')
+        span.sr-only Toggle navigation
+        i.fa.fa-navicon(style='color:rgb(255,255,255);font-size:28px;')
+      #navcol-1.collapse.navbar-collapse
+        ul.nav.navbar-nav.mr-auto
+          li.nav-item(role='presentation', style='color:rgb(255,255,255);')
+            a.nav-link(href='/searches', style='color:rgb(255,255,255);') Searches
+          li.nav-item(role='presentation')
+            a.nav-link(href='/?uid=1', style='color:rgb(255,255,255);') Feed
+        span.navbar-text.actions
+          a.login(href='login', style='color:rgb(255,255,255);') Log In
+          a.btn.btn-light.action-button(role='button', href='signup', style='background-color:rgb(81,81,81);') Sign Up
+script(src='assets/js/jquery.min.js')
+script(src='assets/bootstrap/js/bootstrap.min.js')
+script(src='https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js')
+script(src='https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js')

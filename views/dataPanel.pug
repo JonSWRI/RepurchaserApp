@@ -1,0 +1,41 @@
+body
+.highlight-clean(style='background-color:rgb(255,255,255);')
+  .container
+    .intro
+      h2.text-center Search feed
+      p.text-center
+        | This Page shows an updating feed of saved searches, searches can be edited via the following link
+    .buttons
+      a.btn.btn-primary(role='button', href='/searches', style='background-color:rgb(245,121,0);') Edit Searches
+      
+script(src='assets/js/jquery.min.js')
+script(src='assets/bootstrap/js/bootstrap.min.js')
+script(src='https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js')
+script(src='https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js')
+
+
+each item in newData
+  body
+    .container.justify-content-center.align-content-center(style='background-color:#ffffff;border-style:solid;border-color:#c9c9c9;')
+      .row
+        .col-lg-2(style='background-color:rgba(255,255,255,0);')
+            a(href='//ebay.co.uk/itm/'+item.id target="_blank")
+                img.image(src=item.gallery_url )
+        .col(style='margin:10px;')
+          .row
+            .col(style='margin:0px;')
+              p(style='background-color:rgba(255,0,0,0);font-size:20px;')
+                | #{item.title}
+                br
+          .row
+            .col
+              p(style='font-weight:700;background-color:rgba(57,255,25,0);') £#{item.converted_price}
+          .row
+            .col
+              // p(style='background-color:rgba(24,4,255,0);') Stat: #{item.stat.score} :: Error: #{item.stat.error}
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/bootstrap/js/bootstrap.min.js')
+
+
+
+//#{item.title}

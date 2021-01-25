@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Home | BidPro
+    link(rel='stylesheet', href='assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='assets/fonts/font-awesome.min.css')
+    link(rel='stylesheet', href='assets/fonts/ionicons.min.css')
+    link(rel='stylesheet', href='assets/css/Features-Clean.css')
+    link(rel='stylesheet', href='assets/css/Highlight-Clean.css')
+    link(rel='stylesheet', href='assets/css/Login-Form-Clean.css')
+    link(rel='stylesheet', href='assets/css/Navigation-with-Button.css')
+    link(rel='stylesheet', href='assets/css/styles.css')
+    include nav.pug
+  body
+    .highlight-clean
+      .container
+        .intro
+          h2.text-center Create account or Log in to get started
+          p.text-center
+            | Creating an account gives you a uniquie user ID so you can save searches to your feed
+        .buttons
+          a.btn.btn-primary(role='button', href='/login') Log In
+          a.btn.btn-primary(role='button', href='/signUp') sign up Now
+    .features-clean(style='background-color:rgb(213,213,213);')
+      .container
+        .intro
+          h2.text-center Features
+          p.text-center The BidPro platform helps you monitor saved searches and find deals
+        .row.features
+          .col-sm-6.col-lg-4.item
+            i.fa.fa-map-marker.icon
+            h3.name Works everywhere
+            p.description Available on Mobile, Tablet, Laptop, and Desktop
+          .col-sm-6.col-lg-4.item
+            i.fa.fa-clock-o.icon
+            h3.name Always available
+            p.description BidPro servers are online 24/7
+          .col-sm-6.col-lg-4.item
+            i.fa.fa-list-alt.icon
+            h3.name Customizable
+            p.description Save searches for your favorite categories and get alerts when prices are low
+          .col-sm-6.col-lg-4.item
+            i.fa.fa-bar-chart-o.icon
+            h3.name Track
+            p.description Keep track of price trends
+          .col-sm-6.col-lg-4.item
+            i.fa.fa-plane.icon
+            h3.name Fast
+            p.description Searches are updated every minuite.
+          .col-sm-6.col-lg-4.item
+            i.fa.fa-money.icon
+            h3.name Profit
+            p.description Buy low sell high.
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/bootstrap/js/bootstrap.min.js')

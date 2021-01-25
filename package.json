@@ -1,0 +1,31 @@
+{
+  "name": "ebaysearch",
+  "version": "1.0.0",
+  "description": "Makes API call\r Returns items as html table",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "ebay-node-api": "github:JonSWRI/ebay-node-api",
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "fuse.js": "^3.6.1",
+    "moment": "^2.25.3",
+    "mysql": "^2.18.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonSWRI/EbaySearch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonSWRI/EbaySearch/issues"
+  },
+  "homepage": "https://github.com/JonSWRI/EbaySearch#readme"
+}

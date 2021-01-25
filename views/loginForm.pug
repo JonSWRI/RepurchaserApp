@@ -1,0 +1,19 @@
+html
+  head
+  body
+    .login-clean
+      form(method='post')
+        h2.sr-only Login Form
+        .illustration
+          i.icon.ion-ios-navigate(style='color:rgb(255,4,160);')
+        .form-group
+          input.form-control(type='text' id='email' placeholder='email' name='email')
+        .form-group
+          input.form-control(type='password' id='password' placeholder='password' name='password')
+        .form-group
+          button.btn.btn-primary.btn-block(type='submit', style='background-color:rgb(255,4,160);') Log In
+        a.forgot(href='#') Forgot your email or password?
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/bootstrap/js/bootstrap.min.js')
+
+

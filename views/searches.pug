@@ -1,0 +1,87 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Searches | BidPro
+    link(rel='stylesheet', href='assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='assets/fonts/font-awesome.min.css')
+    link(rel='stylesheet', href='assets/fonts/ionicons.min.css')
+    link(rel='stylesheet', href='assets/css/Data-Table.css')
+    link(rel='stylesheet', href='assets/css/Data-Table2.css')
+    link(rel='stylesheet', href='assets/css/Features-Clean.css')
+    link(rel='stylesheet', href='assets/css/Highlight-Clean.css')
+    link(rel='stylesheet', href='https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css')
+    link(rel='stylesheet', href='assets/css/Login-Form-Clean.css')
+    link(rel='stylesheet', href='assets/css/MUSA_panel-table.css')
+    link(rel='stylesheet', href='assets/css/MUSA_panel-table1.css')
+    link(rel='stylesheet', href='assets/css/Navigation-with-Button.css')
+    link(rel='stylesheet', href='assets/css/Registration-Form-with-Photo.css')
+    link(rel='stylesheet', href='assets/css/styles.css')
+    include nav.pug
+  body
+    .container
+      link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+      .container
+        .row
+          p
+          h1 Saved Searches
+          br
+          .col-md-10.col-md-offset-1
+            .panel.panel-default.panel-table
+              .panel-heading
+                .row
+                  .col.col-xs-6
+                    h3.panel-title
+                  .col.col-xs-6.text-right
+                    button.btn.btn-sm.btn-primary.btn-create(type='button') Create New
+              .panel-body
+                table.table.table-striped.table-bordered.table-list
+                  thead
+                    tr
+                      th
+                        em.fa.fa-cog
+                      th.hidden-xs SID
+                      th Tag
+                      th Keywords
+                  tbody
+                  each item in data
+                    tr
+                      td(align='center')
+                        a.btn.btn-default
+                          em.fa.fa-pencil
+                        a.btn.btn-danger
+                          em.fa.fa-trash
+                      td.hidden-xs #{item.sid}
+                      td #{item.tag}
+                      td 
+                        each keyword in item.keywords 
+                          p #{keyword.word}
+    .container
+      form
+        h1.text-center(style='padding:0px;margin:19px;') Create a new Search
+        .form-group
+          label Search Keywords
+          input.form-control(type='text')
+        .form-group
+          label Category ID
+          input.form-control(type='text')
+        .form-group
+          label Seller
+          input.form-control(type='text')
+        .form-group
+          label Min Price
+          input.form-control(type='text')
+        .form-group
+          label Max Price
+          input.form-control(type='text')
+        .form-group
+          label Listing Type
+          select.form-control
+            optgroup(label='This is a group')
+              option(value='FixedPrice', selected='') Fixed Price
+              option(value='Auction') Auction
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/bootstrap/js/bootstrap.min.js')
+    script(src='https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js')
+    script(src='https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js')

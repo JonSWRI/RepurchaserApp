@@ -1,0 +1,36 @@
+{
+    "debug" : 1,
+    "server" : {
+        "port" : 3050,
+        "searchPeriod" : 15000,
+        "periodicsPeriod" : 86400
+    },
+    "stats" : {
+        "port" : 5000,
+        "debug" : false
+    },
+    "db_py":{
+        "auth_plugin": "mysql_native_password",
+        "pool_size" :5,
+        "pool_reset_session" : true
+    },
+    "db_js":{
+        "connectionLimit": 10,
+        "multipleStatements": true
+    },
+    "db": {
+        "host": "localhost",
+        "user": "bob",
+        "password": "FilmingFriendlyFrogs",
+        "database": "bidpro"
+    },
+    "ebay": {
+        "clientID" : "Jonathan-Search1-PRD-669e70bde-8d1622f8",
+        "countryCode" : "EBAY-GB",
+        "clientSecret" : "PRD-69e70bde529f-b966-4f9c-9a82-cf49",
+        "body" : {
+            "grant_type": "client_credentials",
+            "scope": "https://api.ebay.com/oauth/api_scope"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title SignUp
+    link(rel='stylesheet', href='assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='assets/fonts/font-awesome.min.css')
+    link(rel='stylesheet', href='assets/fonts/ionicons.min.css')
+    link(rel='stylesheet', href='assets/css/Features-Clean.css')
+    link(rel='stylesheet', href='assets/css/Highlight-Clean.css')
+    link(rel='stylesheet', href='assets/css/Login-Form-Clean.css')
+    link(rel='stylesheet', href='assets/css/Navigation-with-Button.css')
+    link(rel='stylesheet', href='assets/css/Registration-Form-with-Photo.css')
+    link(rel='stylesheet', href='assets/css/styles.css')
+    body
+        include nav.pug
+    body
+  body
+    .register-photo
+      .form-container
+        .image-holder
+        form(method='post')
+          h2.text-center
+            strong Create
+            |  an account.
+          .form-group
+            input.form-control(type='email', name='email', placeholder='Email')
+          .form-group
+            input.form-control(type='password', name='password', placeholder='Password')
+          .form-group
+            input.form-control(type='password', name='password-repeat', placeholder='Password (repeat)')
+          .form-group
+            .form-check
+              label.form-check-label
+                input.form-check-input(type='checkbox')
+                | I agree to the license terms.
+          .form-group
+            button.btn.btn-primary.btn-block(type='submit', style='background-color:rgb(245,121,0);') Sign Up
+          a.already(href='/login') You already have an account? Login here.
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/bootstrap/js/bootstrap.min.js')
